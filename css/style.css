@@ -1,0 +1,550 @@
+@charset "UTF-8";
+
+/*//―――――初期化―――――//*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+
+/*//―――――ボディの設定―――――//*/
+body{
+	counter-reset: number 0;
+	background-color: #d7e6f0;
+}
+#back_color{
+	margin: 0 auto;
+	width: 85%;
+	min-width: 700px;
+	max-width: 1010px;
+	background-color: #ffffff;
+}
+
+/*//―――――ヘッダーの設定―――――//*/
+
+/*文字の変更*/
+#lang{
+	margin: 0;
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+#lang li a{
+	display: flex;
+	margin-top: 20px;
+	width: 60px;
+	height: 60px;
+	align-items: center;
+	justify-content: center;
+	background: #ed0d00;
+	color: #ffffff;
+	font-size: 18px;
+	text-decoration: none;
+	border: 1px solid;
+	border-color: #ed0d00;
+	border-radius: 50%;
+}
+#lang li a:hover{
+	background: #ffffff;
+	color: #ed0d00;
+}
+#lang li:last-child{
+	margin-left: 10px;
+	margin-right: 80px;
+}
+
+/*ロゴ*/
+#logo{
+	text-align: center;
+}
+
+/*//―――――コンテンツの設定―――――//*/
+
+/*タイトル名*/
+.title_border{
+	width: 93%;
+	margin: 0 auto;
+	color: #ed0d00;
+	font-size: 40px;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+}
+.title_border:before,
+.title_border:after{
+	content: "";
+	flex-grow: 1;
+	height: 3px;
+	background: #ed0d00;
+	display: block;
+}
+.title_border:before{
+ margin-right:20px;
+}
+.title_border:after{
+	margin-left: 20px;
+}
+
+/*サブタイトル*/
+.sub_title{
+	margin: 0 auto;
+	font-size: 15px;
+	font-weight: bold;
+	color: #e1c800;
+	display: flex;
+	justify-content: center;
+}
+
+/*topの設定*/
+/*ビッグバナー（スライダー）*/
+#big_slider{
+	margin: 40px 0 0;
+	padding: 0;
+	text-align: center;
+	z-index: 0;
+}
+#big_slider ul{
+	list-style-type: none;
+}
+#big_slider img{
+	width: 93%;
+}
+
+/*aboutの設定*/
+#about{
+	text-align: center;
+}
+#title h1{
+	margin: 20px 0 0 0;
+}
+#title p{
+	margin: 0;
+	line-height: 20px;
+}
+#title img{
+	width: 80%;
+}
+#kanji{
+	margin-top: 30px;
+}
+#kanji ul{
+	width: 93%;
+	margin: auto;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+#kanji ul li:first-child{
+	margin-right: 10%;
+}
+#kanji p{
+	margin: 30px 0 0 0;
+	line-height: 20px;
+}
+#kanji img{
+	width: 100%;
+}
+#conversion{
+	width: 93%;
+	margin: 20px auto 0;
+	height: 150px;
+	line-height: 30px;
+	background-color: #d7e6f0;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#conversion p{
+	margin: 0;
+	font-size: 30px;
+	font-weight: bold;
+	color: #ed0d00;
+}
+#conversion form input{
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 8px;
+	vertical-align: middle;
+}
+#conversion form input[name="text"]{
+	width: 300px;
+	height: 35px;
+	padding-left: 10px;
+	font-size: 20px;
+	border: 1px solid;
+}
+#conversion form input[name="submit"]{
+	width: 70px;
+	height: 35px;
+	color: #ffffff;
+	font-size: 15px;
+	background-color: #ed0d00;
+}
+
+/*stepsの設定*/
+#steps{
+	margin-top: 40px;
+}
+#c_steps{
+	margin-top: 40px;
+}
+#step_top{
+	margin: 0 auto;
+	width: 93%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	justify-content: space-between;
+}
+#step_top img{
+	width: 93%;
+}
+#s_right{
+	width: 550px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+#s_right ul{
+	margin-bottom: 0;
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+#create_button{
+	padding: 0.5em;
+	text-align: center;
+	font-weight: bold;
+	font-size: 25px;
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #ed0d00;
+	border-radius: 10px;
+}
+/*
+#s_nav{
+	margin: 40px auto 0;
+	width: 93%;
+}
+#s_nav ul{
+	width: 100%;
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: content;
+}
+#s_nav ul li{
+	width: 33.3%;
+	height: 50px;
+}
+#s_nav ul li a{
+	padding: 10%;
+	font-size: 20px;
+	color: #ed0d00;
+	text-decoration: none;
+	background-color: #ffffff;
+	border: 2px solid;
+}
+#s_nav ul li a:hover{
+	color: #ffffff;
+	background-color: #ed0d00;
+}
+#s_nav ul li:nth-child(2){
+	border-left: 2px solid;
+	border-right: 2px solid;
+}
+*/
+#s_slider{
+	margin: 40px auto 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+#s_slider{
+	height: 100%;
+	width: 80%;
+	list-style-type: none;
+}
+#prev-btn{
+	width: 38px;
+	height: 56px;
+	margin-right: 2%;
+	position: relative;
+}
+#next-btn{
+	margin-left: 2%;
+	width: 39px;
+	height: 57px;
+	position: relative;
+}
+.bx-prev, .bx-next{
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	top: 0;
+}
+#slider_img img{
+	width: 100%;
+}
+
+/*openの設定*/
+#open{
+	margin-top: 50px;
+}
+#c_open{
+	width: 93%;
+	margin: 30px auto 0;
+	text-align: center;
+}
+#o_top img{
+	vertical-align: middle;
+}
+#o_top p{
+	font-weight: bold;
+	line-height: 20px;
+}
+#o_top p:nth-child(3){
+	margin-top: 10px;
+}
+#o_top p small{
+	font-size: 70%;
+	font-weight: lighter;
+}
+#o_under{
+	margin-top: 30px;
+}
+#o_under p{
+	font-weight: bold;
+	line-height: 20px;
+}
+#o_under p:nth-child(2),
+#o_under p:nth-child(4){
+	margin-top: 20px;
+}
+
+/*serviseの設定*/
+#servise{
+	margin-top: 70px;
+}
+#c_servise{
+	width: 93%;
+	margin: 20px auto 0;
+}
+#square{
+	padding: 0;
+	list-style: none;
+	list-style-position: inside;
+}
+#square > li::before{
+	content: '■';
+	font-size: 25px;
+}
+#square > li > h3{
+	display: inline-block;
+	width: 99%;
+	margin-left: -30px;
+	text-indent: 25px;
+	font-size: 25px;
+	border-bottom: 1px solid;
+}
+.square_content{
+	margin: 20px 0 40px 50px;
+}
+#square{
+	font-size: 15px;
+	line-height: 20px;
+}
+#kome{
+	margin-top: 10px;
+}
+#kome li{
+	list-style-type: none;
+	margin-left: 15px;
+	line-height: 15px;
+}
+#kome li small{
+	font-size: 13px;
+}
+#kome li small a{
+	color: #551a8b;
+	text-decoration: none;
+}
+#kome li:before{
+	content: '※';
+	margin-left: -15px;
+}
+#disc{
+	list-style: none;
+	list-style-position: inside;
+}
+#disc li{
+	padding-left: 0.5em;
+	text-indent: -0.5em;
+	line-height: 17px;
+}
+#disc li:before{
+	content: '・';
+	font-size: 15px;
+}
+#disc img{
+	margin-top: 10px;
+}
+#kome_num{
+	margin-top: 10px;
+	list-style: none;
+}
+#kome_num li{
+	line-height: 17px;
+	padding-left: 2em;
+	text-indent: -1em;
+}
+#kome_num li:before{
+	counter-increment: number 1;
+	content: "※"counter(number);
+	display: inline-block;
+	margin-right: 0.5em;
+	font-size: 13px;
+}
+#kome_num small{
+	font-size: 13px;
+}
+
+/*otherの設定*/
+#icon{
+	height: 380px;
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: fixed;
+	top: 250px;
+	right: 5%;
+	z-index: 1;
+}
+#icon li{
+	margin: 0 auto;
+}
+#icon li a[name='conversion']{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	text-decoration: none;
+	background-image: url("../images/henkan_off.png");
+	background-repeat: no-repeat;
+}
+#icon li a[name='conversion']:hover{
+	background-image: url("../images/henkan_on.png");
+}
+#icon li a[name='conversion'] p{
+	margin-top: 50px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	color: #000000;
+}
+#icon li a[name='tsukuru']{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	text-decoration: none;
+	background-image: url("../images/tsukuru.png");
+	background-repeat: no-repeat;
+}
+#icon li a[name='tsukuru']:hover{
+	background-image: url("../images/tsukuru_.png");
+}
+#icon li a[name='tsukuru'] p{
+	margin-top: 50px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	color: #000000;
+}
+#icon li a[name='miru']{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	text-decoration: none;
+	background-image: url("../images/miru.png");
+	background-repeat: no-repeat;
+}
+#icon li a[name='miru']:hover{
+	background-image: url("../images/miru_.png");
+}
+#icon li a[name='miru'] p{
+	margin-top: 50px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	color: #000000;
+}
+#icon li a[name='Facebook']{
+	display: inline-block;
+	margin: 0 10px;
+	width: 33px;
+	height: 34px;
+	background-image: url("../images/Facebook.png");
+	background-repeat: no-repeat;
+}
+#icon li a[name='Twitter']{
+	display: inline-block;
+	width: 33px;
+	height: 34px;
+	background-image: url("../images/Twitter.png");
+	background-repeat: no-repeat;
+}
+#icon li a[name='Instagram']{
+	display: inline-block;
+	width: 33px;
+	height: 34px;
+	background-image: url("../images/Instagram.png");
+	background-repeat: no-repeat;
+}
+#other > img{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+/*//―――――フッターの設定―――――//*/
+
+
+
+@media screen and ( max-width:700px ){
+	#back_color{
+		background-color: #ed0d00;
+	}
+}
