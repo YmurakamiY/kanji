@@ -181,7 +181,7 @@ body{
 	width: 93%;
 	margin: 20px auto 0;
 	height: 150px;
-	line-height: 30px;
+	line-height: 1;
 	background-color: #d7e6f0;
 	border-radius: 10px;
 	display: flex;
@@ -191,7 +191,7 @@ body{
 }
 #conversion p{
 	margin: 0;
-	font-size: 30px;
+	font-size: calc(150% + 0.25vw);
 	font-weight: bold;
 	color: #ed0d00;
 }
@@ -206,14 +206,14 @@ body{
 	width: 300px;
 	height: 35px;
 	padding-left: 10px;
-	font-size: 20px;
+	font-size: calc(150% + 0.25vw);
 	border: 1px solid;
 }
 #conversion form input[name="submit"]{
 	width: 70px;
 	height: 35px;
 	color: #ffffff;
-	font-size: 15px;
+	font-size: calc(80% + 0.25vw);
 	background-color: #ed0d00;
 }
 
@@ -252,17 +252,43 @@ body{
 	padding: 0.5em;
 	text-align: center;
 	font-weight: bold;
-	font-size: 25px;
+	font-size: calc(150% + 0.25vw);
 	text-decoration: none;
 	color: #ffffff;
 	background-color: #ed0d00;
 	border-radius: 10px;
 }
-/*
-#s_nav{
-	margin: 40px auto 0;
+#slider_tab{
 	width: 93%;
+	height: 50px;
+	margin: 40px auto 0;
 }
+#slider_tab ul{
+	height: 100%;
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+#slider_tab ul li{
+	/* padding: auto; */
+	/* margin: auto; */
+	width: 100%;
+	height: 100%;
+}
+#slider_tab ul li a{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-color: red;
+}
+
+/*
 #s_nav ul{
 	width: 100%;
 	list-style-type: none;
