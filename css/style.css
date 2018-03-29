@@ -17,7 +17,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	outline: 0;
-	font-size: 100%;
+	font-size: 62.5;
 	vertical-align: baseline;
 	background: transparent;
 }
@@ -27,6 +27,9 @@ time, mark, audio, video {
 body{
 	counter-reset: number 0;
 	background-color: #d7e6f0;
+	/* font-size: calc(15% + 0.5vw); */
+	/* font-size: 1em; */
+	/* font-size: calc(15% + 0.5vw); */
 }
 #back_color{
 	margin: 0 auto;
@@ -35,8 +38,20 @@ body{
 	max-width: 1010px;
 	background-color: #ffffff;
 }
+.pc{
+	display: inline-block !important;
+}
+.sp{
+	display: none !important;
+}
+
 
 /*//―――――ヘッダーの設定―――――//*/
+
+/*ボーダー*/
+#header > img{
+	display: none;
+}
 
 /*文字の変更*/
 #lang{
@@ -55,7 +70,7 @@ body{
 	justify-content: center;
 	background: #ed0d00;
 	color: #ffffff;
-	font-size: 18px;
+	font-size: calc(100% + 0.25vw);
 	text-decoration: none;
 	border: 1px solid;
 	border-color: #ed0d00;
@@ -69,7 +84,6 @@ body{
 	margin-left: 10px;
 	margin-right: 80px;
 }
-
 /*ロゴ*/
 #logo{
 	text-align: center;
@@ -82,7 +96,7 @@ body{
 	width: 93%;
 	margin: 0 auto;
 	color: #ed0d00;
-	font-size: 40px;
+	font-size: calc(220% + 0.25vw);
 	line-height: 1;
 	display: flex;
 	align-items: center;
@@ -105,7 +119,7 @@ body{
 /*サブタイトル*/
 .sub_title{
 	margin: 0 auto;
-	font-size: 15px;
+	font-size: calc(70% + 0.25vw);
 	font-weight: bold;
 	color: #e1c800;
 	display: flex;
@@ -136,7 +150,7 @@ body{
 }
 #title p{
 	margin: 0;
-	line-height: 20px;
+	line-height: 1.4;
 }
 #title img{
 	width: 80%;
@@ -158,7 +172,7 @@ body{
 }
 #kanji p{
 	margin: 30px 0 0 0;
-	line-height: 20px;
+	line-height: 1.4;
 }
 #kanji img{
 	width: 100%;
@@ -286,7 +300,7 @@ body{
 }
 #s_slider{
 	height: 100%;
-	width: 80%;
+	width: 93%;
 	list-style-type: none;
 }
 #prev-btn{
@@ -435,6 +449,10 @@ body{
 }
 
 /*otherの設定*/
+#other{
+	display: inline-block;
+	width: 100%;
+}
 #icon{
 	height: 380px;
 	list-style-type: none;
@@ -525,26 +543,136 @@ body{
 	background-image: url("../images/Instagram.png");
 	background-repeat: no-repeat;
 }
-#other > img{
+#other a[name="return"]{
+	display: inline-block;
+	width: 83px;
+	height: 63px;
 	position: fixed;
-	right: 0;
+	right: 10%;
 	bottom: 0;
+}
+
+/*//―――――フッターの設定―――――//*/
+#footer{
+	margin: 50px auto 0;
+}
+#f_content{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+#offer{
+	width: 600px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+#offer h3{
+	margin-right: 30%;
+	font-size: 25px;
+	font-weight: lighter;
+}
+#offer ul{
+	list-style-type: none;
+}
+#sponsorship{
+	width: 600px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+#sponsorship h3{
+	margin-right: 20%;
+	font-size: 25px;
+	font-weight: lighter;
+}
+#sponsorship ul{
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+#sponsorship ul li:first-child{
+	margin-right: 20px;
 }
 
 
 
 
 
+@media screen and (max-width:700px){
+	/*
+	html, body, div, span, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	abbr, address, cite, code,
+	del, dfn, em, img, ins, kbd, q, samp,
+	small, strong, sub, sup, var,
+	b, i,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section, summary,
+	time, mark, audio, video {
+		/* font-size: 62.5%; */
+	/* } */
 
-
-
-
-/*//―――――フッターの設定―――――//*/
-
-
-
-@media screen and ( max-width:700px ){
 	#back_color{
-		background-color: #ed0d00;
+		/* background-color: red; */
+		min-width: 320px;
+		width: 100%;
+		overflow: hidden;
+	}
+	.pc{
+		display: none !important;
+	}
+	.sp{
+		display: inline-block !important;
+	}
+
+/*//―――――ヘッダーの設定―――――//*/
+	#header > img{
+		width: 100%;
+		margin-top: 70px;
+	}
+	#logo a img{
+		width: 60%
+	}
+
+/*//―――――コンテンツの設定―――――//*/
+
+	/*---タイトル---*/
+
+
+
+	/*---topの設定---*/
+	/*ビッグバナー（スライダー）*/
+	#big_slider{
+		margin: 0;
+	}
+	#big_slider img{
+		width: 100%;
+	}
+
+	/*---aboutの設定---*/
+	#conversion{
+		width: 100%;
+		border-radius: 0;
+	}
+
+
+
+
+
+	/*---otherの設定---*/
+	#icon{
+		width: 50%;
+		flex-direction: row;
+		position: absolute;
+		top: 0;
+		left: 5%;
+
 	}
 }

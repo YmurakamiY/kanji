@@ -4,7 +4,6 @@ $(document).ready(function(){
   $('#big_slider').bxSlider({
     auto: true,
     mode: 'fade',
-    minSlides: 3,
     controls: false
   });
 });
