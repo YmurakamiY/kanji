@@ -17,7 +17,9 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	outline: 0;
-	font-size: 62.5;
+	font-size: 16px;
+	/* font-size: 62.5%; */
+	/* font-size: calc(100% + 0.25vw); */
 	vertical-align: baseline;
 	background: transparent;
 }
@@ -27,9 +29,6 @@ time, mark, audio, video {
 body{
 	counter-reset: number 0;
 	background-color: #d7e6f0;
-	/* font-size: calc(15% + 0.5vw); */
-	/* font-size: 1em; */
-	/* font-size: calc(15% + 0.5vw); */
 }
 #back_color{
 	margin: 0 auto;
@@ -53,6 +52,9 @@ body{
 	display: none;
 }
 
+#header div{
+}
+
 /*文字の変更*/
 #lang{
 	margin: 0;
@@ -64,21 +66,21 @@ body{
 #lang li a{
 	display: flex;
 	margin-top: 20px;
-	width: 60px;
-	height: 60px;
+	width: 50%;
+	height: 50%;
 	align-items: center;
 	justify-content: center;
-	background: #ed0d00;
-	color: #ffffff;
-	font-size: calc(100% + 0.25vw);
+	background: #ffffff;
+	color: #ed0d00;
+	font-size: calc(80% + 0.25vw);
 	text-decoration: none;
 	border: 1px solid;
 	border-color: #ed0d00;
 	border-radius: 50%;
 }
 #lang li a:hover{
-	background: #ffffff;
-	color: #ed0d00;
+	background: #ed0d00;
+	color: #ffffff;
 }
 #lang li:last-child{
 	margin-left: 10px;
@@ -110,7 +112,7 @@ body{
 	display: block;
 }
 .title_border:before{
- margin-right:20px;
+ margin-right: 20px;
 }
 .title_border:after{
 	margin-left: 20px;
@@ -119,7 +121,7 @@ body{
 /*サブタイトル*/
 .sub_title{
 	margin: 0 auto;
-	font-size: calc(70% + 0.25vw);
+	font-size: calc(60% + 0.25vw);
 	font-weight: bold;
 	color: #e1c800;
 	display: flex;
@@ -150,6 +152,7 @@ body{
 }
 #title p{
 	margin: 0;
+	font-size: calc(70% + 0.25vw);
 	line-height: 1.4;
 }
 #title img{
@@ -191,7 +194,7 @@ body{
 }
 #conversion p{
 	margin: 0;
-	font-size: calc(150% + 0.25vw);
+	font-size: calc(160% + 0.25vw);
 	font-weight: bold;
 	color: #ed0d00;
 }
@@ -206,7 +209,7 @@ body{
 	width: 300px;
 	height: 35px;
 	padding-left: 10px;
-	font-size: calc(150% + 0.25vw);
+	font-size: calc(120% + 0.25vw);
 	border: 1px solid;
 }
 #conversion form input[name="submit"]{
@@ -260,63 +263,48 @@ body{
 }
 #slider_tab{
 	width: 93%;
-	height: 50px;
-	margin: 40px auto 0;
-}
-#slider_tab ul{
-	height: 100%;
+	margin: 50px auto 0;
 	list-style-type: none;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 }
-#slider_tab ul li{
-	/* padding: auto; */
-	/* margin: auto; */
+#slider_tab li{
+	position: relative;
 	width: 100%;
 	height: 100%;
 }
-#slider_tab ul li a{
+#slider_tab li a{
+	font-size: calc(100% + 0.25vw);
+	font-weight: bold;
+	padding: 20px 0;
 	width: 100%;
-	height: 100%;
 	display: inline-block;
 	text-align: center;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	background-color: red;
+	background-color: #ffffff;
+	color: #ed0d00;
+	border: 1px solid;
+	text-decoration: none;
+}
+#slider_tab li:first-child a{
+	border-top-left-radius: 10px;
+}
+#slider_tab li:first-child a{
+	border-bottom-left-radius: 10px;
+}
+#slider_tab li:last-child a{
+	border-top-right-radius: 10px;
+}
+#slider_tab li:last-child a{
+	border-bottom-right-radius: 10px;
+}
+#slider_tab li a:hover{
+	background-color: #ed0d00;
+	color: #ffffff;
+	border: 1px solid;
 }
 
-/*
-#s_nav ul{
-	width: 100%;
-	list-style-type: none;
-	display: flex;
-	flex-direction: row;
-	justify-content: content;
-}
-#s_nav ul li{
-	width: 33.3%;
-	height: 50px;
-}
-#s_nav ul li a{
-	padding: 10%;
-	font-size: 20px;
-	color: #ed0d00;
-	text-decoration: none;
-	background-color: #ffffff;
-	border: 2px solid;
-}
-#s_nav ul li a:hover{
-	color: #ffffff;
-	background-color: #ed0d00;
-}
-#s_nav ul li:nth-child(2){
-	border-left: 2px solid;
-	border-right: 2px solid;
-}
-*/
 #s_slider{
 	margin: 40px auto 0;
 	display: flex;
@@ -366,13 +354,14 @@ body{
 }
 #o_top p{
 	font-weight: bold;
-	line-height: 20px;
+	font-size: calc(70% + 0.25vw);
+	line-height: 1.4;
 }
 #o_top p:nth-child(3){
 	margin-top: 10px;
 }
 #o_top p small{
-	font-size: 70%;
+	font-size: calc(55% + 0.25vw);
 	font-weight: lighter;
 }
 #o_under{
@@ -380,7 +369,11 @@ body{
 }
 #o_under p{
 	font-weight: bold;
-	line-height: 20px;
+	font-size: calc(55% + 0.25vw);
+	line-height: 1.3;
+}
+#o_under p small{
+	font-size: calc(55% + 0.25vw);
 }
 #o_under p:nth-child(2),
 #o_under p:nth-child(4){
@@ -402,33 +395,35 @@ body{
 }
 #square > li::before{
 	content: '■';
-	font-size: 25px;
+	font-size: calc(110% + 0.25vw);
 }
 #square > li > h3{
 	display: inline-block;
 	width: 99%;
 	margin-left: -30px;
 	text-indent: 25px;
-	font-size: 25px;
+	font-size: calc(110% + 0.25vw);
+	line-height: 1;
 	border-bottom: 1px solid;
 }
 .square_content{
 	margin: 20px 0 40px 50px;
 }
-#square{
-	font-size: 15px;
-	line-height: 20px;
+#square p{
+	font-size: calc(60% + 0.25vw);
+	line-height: 1.4;
 }
 #kome{
 	margin-top: 10px;
 }
 #kome li{
 	list-style-type: none;
-	margin-left: 15px;
-	line-height: 15px;
+	line-height: 1.4;
+	margin-left: 0.5em;
 }
 #kome li small{
-	font-size: 13px;
+	font-size: calc(60% + 0.25vw);
+	line-height: 1.4;
 }
 #kome li small a{
 	color: #551a8b;
@@ -436,7 +431,7 @@ body{
 }
 #kome li:before{
 	content: '※';
-	margin-left: -15px;
+	margin-left: 0.5em;
 }
 #disc{
 	list-style: none;
@@ -445,11 +440,12 @@ body{
 #disc li{
 	padding-left: 0.5em;
 	text-indent: -0.5em;
-	line-height: 17px;
+	font-size: calc(60% + 0.25vw);
+	line-height: 1.4;
 }
 #disc li:before{
 	content: '・';
-	font-size: 15px;
+	font-size: calc(60% + 0.25vw);
 }
 #disc img{
 	margin-top: 10px;
@@ -459,7 +455,7 @@ body{
 	list-style: none;
 }
 #kome_num li{
-	line-height: 17px;
+	line-height: 1.4;
 	padding-left: 2em;
 	text-indent: -1em;
 }
@@ -468,10 +464,10 @@ body{
 	content: "※"counter(number);
 	display: inline-block;
 	margin-right: 0.5em;
-	font-size: 13px;
+	font-size: calc(60% + 0.25vw);
 }
 #kome_num small{
-	font-size: 13px;
+	font-size: calc(60% + 0.25vw);
 }
 
 /*otherの設定*/
@@ -506,10 +502,9 @@ body{
 }
 #icon li a[name='conversion'] p{
 	margin-top: 50px;
-	font-size: 12px;
 	font-weight: bold;
 	text-align: center;
-	color: #000000;
+	/* color: #000000; */
 }
 #icon li a[name='tsukuru']{
 	display: inline-block;
@@ -524,10 +519,10 @@ body{
 }
 #icon li a[name='tsukuru'] p{
 	margin-top: 50px;
-	font-size: 12px;
+	/* font-size: 12px; */
 	font-weight: bold;
 	text-align: center;
-	color: #000000;
+	/* color: #000000; */
 }
 #icon li a[name='miru']{
 	display: inline-block;
@@ -542,10 +537,10 @@ body{
 }
 #icon li a[name='miru'] p{
 	margin-top: 50px;
-	font-size: 12px;
+	/* font-size: 12px; */
 	font-weight: bold;
 	text-align: center;
-	color: #000000;
+	/* color: #000000; */
 }
 #icon li a[name='Facebook']{
 	display: inline-block;
@@ -577,6 +572,10 @@ body{
 	right: 10%;
 	bottom: 0;
 }
+#icon p{
+	font-size: calc(60% + 0.25vw);
+	color: #000000;
+}
 
 /*//―――――フッターの設定―――――//*/
 #footer{
@@ -597,7 +596,7 @@ body{
 }
 #offer h3{
 	margin-right: 30%;
-	font-size: 25px;
+	font-size: calc(150% + 0.25vw);
 	font-weight: lighter;
 }
 #offer ul{
@@ -611,7 +610,7 @@ body{
 }
 #sponsorship h3{
 	margin-right: 20%;
-	font-size: 25px;
+	font-size: calc(150% + 0.25vw);
 	font-weight: lighter;
 }
 #sponsorship ul{
@@ -646,8 +645,7 @@ body{
 	/* } */
 
 	#back_color{
-		/* background-color: red; */
-		min-width: 320px;
+		min-width: 100px;
 		width: 100%;
 		overflow: hidden;
 	}
@@ -664,9 +662,15 @@ body{
 		margin-top: 70px;
 	}
 	#logo a img{
-		width: 60%
+		width: 50%
 	}
-
+	#lang li:last-child{
+		margin: 0;
+	}
+	#lang li a{
+		width: 40px;
+		height: 40px;
+	}
 /*//―――――コンテンツの設定―――――//*/
 
 	/*---タイトル---*/
@@ -688,9 +692,30 @@ body{
 		border-radius: 0;
 	}
 
-
-
-
+	/*---opneの設定---*/
+	#c_open{
+		font-size: calc(50% + 0.25vw);
+	}
+	#c_open p{
+		font-size: calc(50% + 0.25vw);
+	}
+	#o_top{
+		width: 95%;
+		text-align: center;
+	}
+	#o_top > div:first-child img{
+		width: 30%;
+	}
+	#o_top > div:nth-child(2){
+		margin-top: 5px;
+	}
+	#o_top > div:nth-child(2) img{
+		width: 100%;
+		height: auto;
+	}
+	#o_under img{
+		width: 80%;
+	}
 
 	/*---otherの設定---*/
 	#icon{
@@ -699,6 +724,9 @@ body{
 		position: absolute;
 		top: 0;
 		left: 5%;
-
+	}
+	#icon p{
+		font-size: calc(50% + 0.25vw);
+		color: #ed0d00;
 	}
 }
